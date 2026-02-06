@@ -39,7 +39,8 @@ exports.createSubSection = async (req, res) => {
                                                                 }
                                                             },
                                                             {new: true}
-                                                            ).populate("subSectionData")
+                                                            )
+                                                            .populate("subSectionData")
                                                             .exec();
 
         const updatedCourse = await Course.findById(courseId)
