@@ -1,6 +1,6 @@
 const ContactUs = require("../models/ContactUs");
 
-exports.contactUs = async(req, res) => {
+exports.contactUs = async (req, res) => {
     try {
         
         const {
@@ -19,7 +19,7 @@ exports.contactUs = async(req, res) => {
             });
         }
 
-        const createdContact = ContactUs.create({
+        const createdContact = await ContactUs.create({
             firstName,
             lastName,
             message,
