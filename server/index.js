@@ -24,9 +24,7 @@ app.use(
     cors({
         origin: ["http://localhost:5173", 
             "http://www.localhost:5173", 
-            "https://study-notion-iota-one.vercel.app", 
-            "https://study-notion-git-main-dinesh-yadavs-projects-c403d64f.vercel.app", 
-            "https://study-notion-c6jatbjf5-dinesh-yadavs-projects-c403d64f.vercel.app"
+            "https://study-notion-iota-one.vercel.app",
         ], 
         credentials: true,
         //allowedHeaders: ["Authorization", "Content-Type"],
