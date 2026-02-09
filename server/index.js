@@ -22,7 +22,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: ["http://localhost:5173", "http://www.localhost:5173", "https://study-notion-iota-one.vercel.app"], 
+        origin: ["http://localhost:5173", 
+            "http://www.localhost:5173", 
+            "https://study-notion-iota-one.vercel.app", 
+            "study-notion-git-main-dinesh-yadavs-projects-c403d64f.vercel.app", 
+            "study-notion-c6jatbjf5-dinesh-yadavs-projects-c403d64f.vercel.app"
+        ], 
         credentials: true,
         //allowedHeaders: ["Authorization", "Content-Type"],
     })
