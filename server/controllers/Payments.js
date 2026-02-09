@@ -1,4 +1,3 @@
-const { toast } = require("react-toastify");
 const { instance } = require("../config/razorpay");
 const Course = require("../models/Course");
 const User = require("../models/User");
@@ -213,7 +212,6 @@ exports.capturePayment = async (req, res) => {
 
         } catch(error) {
             console.log("Error at creating order", error);
-            toast.error(error.message);
         }
 
     } catch(error) {
@@ -257,7 +255,6 @@ exports.verifyPayments = async (req, res) => {
 
     } catch(error) {
         console.log(error);
-        toast.error("Error in verifyPayment");
     }
 }
 
@@ -314,7 +311,6 @@ const enrollStudents = async (courses, userId, res) => {
 
     } catch(error) {
         console.log(error);
-        toast.error("Error in enrolling the student")
     }
 }
 
