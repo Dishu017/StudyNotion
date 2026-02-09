@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import SignupImage from "../assets/Images/signup.webp"
-import Frame from "../assets/Images/Frame.png"
+import Frame from "../assets/Images/frame.png"
 import HighlightText from "../components/core/HomePage/HighlightText"
 import CountryCode from "../data/countrycode.json"
 import { RiEyeOffFill } from "react-icons/ri";
