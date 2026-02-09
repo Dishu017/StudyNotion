@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import HighlightText from '../components/core/HomePage/HighlightText'
 import { Link, useNavigate } from "react-router-dom"
 import LoginImage from "../assets/Images/login.webp"
-import Frame from "../assets/Images/Frame.png"
+import Frame from "../assets/Images/frame.png"
 import { RiEyeOffFill } from "react-icons/ri";
 import { HiEye } from "react-icons/hi";
 import { toast } from 'react-toastify';
