@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "vite build"
+    "dev": "nodemon index.js"
   },
   "author": "dagger-01",
   "license": "ISC",
