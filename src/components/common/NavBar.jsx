@@ -5,8 +5,6 @@ import { Link, useLocation, matchPath, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { FaCartShopping } from "react-icons/fa6";
 import ProfileDropDown from "../core/auth/ProfileDropDown"
-import { apiconnector } from '../../services/apiconnector'
-import { categories } from '../../services/apis'
 import { useState, useEffect } from 'react'
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { getAllCategory } from "../../services/operations/categoryAPI"
@@ -67,7 +65,7 @@ const NavBar = () => {
                                 rounded-md top-0 mt-7 left-1 translate-x-[-20%] transition-opacity group-hover:opacity-100 duration-300'>
                                     <div className='bg-white w-[2rem] h-[2rem] absolute -top-1 translate-x-[5.8rem] rounded-md rotate-45'/>
                                     {
-                                        subLinks.map((ele, index) => (
+                                        subLinks?.map((ele, index) => (
                                             <Link to={`catalog/${ele.name.split(" ").join("-").toLowerCase()}`} key={index}>
                                                 <p 
                                                 className={`text-richblack-900 text-[1.1rem] px-3 py-2 rounded-md my-2 hover:bg-richblack-300 hover:text-richblack-800`}
