@@ -48,7 +48,7 @@ const Login = () => {
 
     return (
         loading ?
-        (<div className='spinner'></div>): 
+        (<div className='spinner w-screen flex justify-center items-center'></div>): 
         (<div className='w-screen min-h-screen bg-richblack-900 text-richblack-25'>
             <div className='w-10/12 mx-auto flex flex-row pt-20 gap-12 justify-around'>
                 {/* Login Form Section */}
