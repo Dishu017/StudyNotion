@@ -38,9 +38,9 @@ const CoursePage = () => {
 
     useEffect(() => {
             const initialRun = async () => {
-                console.log("Id is ", courseId);
+                //console.log("Id is ", courseId);
                 const result = await getAverageRatings({courseId});
-                console.log("Result is:", result);
+                //console.log("Result is:", result);
                 setAverageRating(result);
             }
             initialRun();
