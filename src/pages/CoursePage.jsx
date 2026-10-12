@@ -57,10 +57,10 @@ const CoursePage = () => {
 
     const handleAddToCart = () => {
         if(!token) {
-            console.log("here");
+            //console.log("here");
             setConfirmationModal(true);
         }
-        console.log("Inside cart")
+        //console.log("Inside cart")
         dispatch(addToCart(courseData));
     }
 
@@ -73,7 +73,7 @@ const CoursePage = () => {
     }
 
     function toggleFunction(index) {
-        console.log("Inside toggle fn");
+        //console.log("Inside toggle fn");
         if(bodyArray.includes(index)) {
             setBodyArray((prev) => prev.filter((ele) => ele !== index));
         }
@@ -86,7 +86,7 @@ const CoursePage = () => {
         setBodyArray([]);
     }
         
-    console.log("Debugging", courseData?.ratingAndReviews, courseData);
+    //console.log("Debugging", courseData?.ratingAndReviews, courseData);
 
     return (
             <div className='w-full mx-auto'>
