@@ -46,7 +46,7 @@ const NestedView = ({
             sectionId: sectionId,
             courseId: course._id,
         });
-        console.log("response in nestedview", response)
+        //console.log("response in nestedview", response)
         dispatch(setCourse(response));
     }
 

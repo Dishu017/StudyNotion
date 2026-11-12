@@ -199,12 +199,12 @@ exports.capturePayment = async (req, res) => {
         const options = {
             amount: totalAmount * 100,
             currency,
-            // reciept: crypto.randomUUID(),
+            // reciept: crypto.randomUUID(), deprecated -- property isn't accepted anymore
         }
 
         try {
             const paymentResponse = await instance.orders.create(options);
-            console.log("Response Payment", paymentResponse);
+            //console.log("Response Payment", paymentResponse); debugging logs
             return res.status(200).json({
                 success: true,
                 data: paymentResponse,
@@ -288,7 +288,7 @@ const enrollStudents = async (courses, userId, res) => {
                 completedVideos: [],
             }
 
-            const newCourseProgressDoc = CourseProgress.create(courseProgressInitial);
+            const newCourseProgressDoc = await CourseProgress.create(courseProgressInitial);
 
             const updatedUser = await User.findByIdAndUpdate(
                 userId,
@@ -301,7 +301,7 @@ const enrollStudents = async (courses, userId, res) => {
                 {new: true}
             );
 
-            console.log("Courses", updatedUser.courses);
+            //console.log("Courses", updatedUser.courses);
 
             const emailResponse = await mailSender(updatedUser.email, 
                                                 courseEnrollmentEmail(updatedCourse.courseName, updatedUser.firstName),

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import { getCategory } from "../../../../services/operations/categoryAPI"
@@ -19,7 +19,7 @@ const CourseInformation = () => {
     const [preview, setPreview] = useState(null);
 
     const { course, editCourse } = useSelector((state) => state.course);
-    console.log("course", course);
+    //console.log("course", course);
     const chooseRef = useRef(null);
 
     const {
@@ -89,9 +89,9 @@ const CourseInformation = () => {
 
         if(editCourse && course) {
             //console.log("Here2")
-            console.log(isFormUpdated());
+            //console.log(isFormUpdated());
             if(isFormUpdated()) {
-                console.log("Inside");
+                //console.log("Inside");
 
                 const currentValues = getValues();
                 const formData = new FormData();
